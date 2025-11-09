@@ -1,482 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K2 Solutions - Freelance Software Development</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K2 Solutions - Freelance Software Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    :root {
-      --primary-color: #0066cc;
-      --secondary-color: #004c99;
-      --dark-color: #1a1a1a;
-      --light-color: #f8f9fa;
-      --text-color: #333;
-      --accent-color: #00d4ff;
-      --bg-color: #ffffff;
-      --card-bg: #ffffff;
-      --nav-bg: #ffffff;
-      --section-bg: #f8f9fa;
-    }
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #004c99;
+            --dark-color: #1a1a1a;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --accent-color: #00d4ff;
+            --bg-color: #ffffff;
+            --card-bg: #ffffff;
+            --nav-bg: #ffffff;
+            --section-bg: #f8f9fa;
+        }
 
-    [data-theme="dark"] {
-      --primary-color: #3399ff;
-      --secondary-color: #0066cc;
-      --dark-color: #f8f9fa;
-      --light-color: #1a1a1a;
-      --text-color: #e0e0e0;
-      --accent-color: #00d4ff;
-      --bg-color: #0a0a0a;
-      --card-bg: #1a1a1a;
-      --nav-bg: #0f0f0f;
-      --section-bg: #141414;
-    }
+        [data-theme="dark"] {
+            --primary-color: #3399ff;
+            --secondary-color: #0066cc;
+            --dark-color: #f8f9fa;
+            --light-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --accent-color: #00d4ff;
+            --bg-color: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --nav-bg: #0f0f0f;
+            --section-bg: #141414;
+        }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: var(--text-color);
-      background-color: var(--bg-color);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-    /* Navigation */
-    nav {
-      background: var(--nav-bg);
-      padding: 1rem 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
+        /* Navigation */
+        nav {
+            background: var(--nav-bg);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    nav .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: var(--primary-color);
-    }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
 
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-color);
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-    .nav-links a:hover {
-      color: var(--primary-color);
-    }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
 
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-      color: white;
-      padding: 150px 2rem 100px;
-      text-align: center;
-      margin-top: 70px;
-    }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 150px 2rem 100px;
+            text-align: center;
+            margin-top: 70px;
+        }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      animation: fadeInUp 0.8s ease-out;
-    }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
 
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      opacity: 0.95;
-      animation: fadeInUp 0.8s ease-out 0.2s backwards;
-    }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
 
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: white;
-      color: var(--primary-color);
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: bold;
-      transition: transform 0.3s, box-shadow 0.3s;
-      animation: fadeInUp 0.8s ease-out 0.4s backwards;
-    }
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
 
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
 
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-    /* Section */
-    section {
-      padding: 80px 2rem;
-    }
+        /* Section */
+        section {
+            padding: 80px 2rem;
+        }
 
-    section h2 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      color: var(--dark-color);
-    }
+        section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-color);
+        }
 
-    /* Services */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .service-card {
-      background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease;
-    }
+        .service-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease;
+        }
 
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
 
-    .service-card h3 {
-      color: var(--primary-color);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
+        .service-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
 
-    .service-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
 
-    /* About */
-    #about {
-      background: var(--section-bg);
-      transition: background-color 0.3s ease;
-    }
+        /* About */
+        #about {
+            background: var(--section-bg);
+            transition: background-color 0.3s ease;
+        }
 
-    .about-content {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-    .about-content p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
 
-    .skill-tag {
-      background: var(--card-bg);
-      padding: 0.5rem 1.5rem;
-      border-radius: 25px;
-      font-weight: 500;
-      color: var(--primary-color);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease;
-    }
+        .skill-tag {
+            background: var(--card-bg);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 500;
+            color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
 
-    /* Contact */
-    #contact {
-      background: var(--dark-color);
-      color: white;
-    }
+        /* Contact */
+        #contact {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
 
-    #contact h2 {
-      color: white;
-    }
+        #contact h2 {
+            color: var(--primary-color);
+        }
 
-    .contact-content {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
 
-    .contact-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      font-size: 1.1rem;
-    }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
 
-    .contact-item a {
-      color: var(--accent-color);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+        .contact-item a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-    .contact-item a:hover {
-      color: white;
-    }
+        .contact-item a:hover {
+            color: white;
+        }
 
-    /* Footer */
-    footer {
-      background: #0a0a0a;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
 
-    /* Theme Toggle */
-    .theme-toggle {
-      background: var(--card-bg);
-      border: 2px solid var(--primary-color);
-      color: var(--text-color);
-      border-radius: 50px;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+        /* Theme Toggle */
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 2px solid var(--primary-color);
+            color: var(--text-color);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-    .theme-toggle:hover {
-      background: var(--primary-color);
-      color: white;
-      transform: scale(1.05);
-    }
+        .theme-toggle:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.05);
+        }
 
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
 
-      .hero p {
-        font-size: 1.1rem;
-      }
+            .hero p {
+                font-size: 1.1rem;
+            }
 
-      .nav-links {
-        gap: 1rem;
-      }
+            .nav-links {
+                gap: 1rem;
+            }
 
-      section h2 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+            section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 <!-- Navigation -->
 <nav>
-  <div class="container">
-    <div class="logo">K2 Solutions</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span id="themeIcon">🌙</span>
-      </button></li>
-    </ul>
-  </div>
+    <div class="container">
+        <div class="logo">K2 Solutions</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
-  <h1>Building Digital Solutions</h1>
-  <p>Professional Software Development for Your Business</p>
-  <a href="#contact" class="cta-button">Get In Touch</a>
+    <h1>Building Digital Solutions</h1>
+    <p>Professional Software Development for Your Business</p>
+    <a href="#contact" class="cta-button">Get In Touch</a>
 </section>
 
 <!-- Services Section -->
 <section id="services">
-  <h2>What I Do</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">💻</div>
-      <h3>Web Development</h3>
-      <p>Custom websites and web applications built with modern technologies. Responsive, fast, and user-friendly solutions tailored to your needs.</p>
+    <h2>What I Do</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Web Development</h3>
+            <p>Custom websites and web applications built with modern technologies. Responsive, fast, and user-friendly
+                solutions tailored to your needs.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Mobile Apps</h3>
+            <p>Cross-platform mobile applications that work seamlessly on iOS and Android. Native performance with
+                efficient development.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">⚙️</div>
+            <h3>Backend Systems</h3>
+            <p>Robust server-side solutions, APIs, and database architecture. Scalable and secure infrastructure for
+                your applications.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>Clean, intuitive interfaces that provide excellent user experience. Modern designs that align with your
+                brand identity.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>Maintenance & Support</h3>
+            <p>Ongoing support, updates, and optimization for your existing applications. Keep your software running
+                smoothly.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">💡</div>
+            <h3>Consulting</h3>
+            <p>Technical guidance and strategic planning for your projects. From idea to implementation, I'll help you
+                succeed.</p>
+        </div>
     </div>
-    <div class="service-card">
-      <div class="service-icon">📱</div>
-      <h3>Mobile Apps</h3>
-      <p>Cross-platform mobile applications that work seamlessly on iOS and Android. Native performance with efficient development.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">⚙️</div>
-      <h3>Backend Systems</h3>
-      <p>Robust server-side solutions, APIs, and database architecture. Scalable and secure infrastructure for your applications.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🎨</div>
-      <h3>UI/UX Design</h3>
-      <p>Clean, intuitive interfaces that provide excellent user experience. Modern designs that align with your brand identity.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔧</div>
-      <h3>Maintenance & Support</h3>
-      <p>Ongoing support, updates, and optimization for your existing applications. Keep your software running smoothly.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">💡</div>
-      <h3>Consulting</h3>
-      <p>Technical guidance and strategic planning for your projects. From idea to implementation, I'll help you succeed.</p>
-    </div>
-  </div>
 </section>
 
 <!-- About Section -->
 <section id="about">
-  <h2>About Me</h2>
-  <div class="about-content">
-    <p>Hi! I'm Klemen Koleša, a passionate software developer with expertise in building modern, efficient, and scalable applications. I turn ideas into reality through clean code and innovative solutions.</p>
-    <p>With years of experience in the industry, I've worked on diverse projects ranging from small business websites to complex enterprise applications. I'm committed to delivering high-quality work that exceeds expectations.</p>
+    <h2>About Me</h2>
+    <div class="about-content">
+        <p>Hi! I'm Klemen Koleša, a passionate software developer with expertise in building modern, efficient, and
+            scalable applications. I turn ideas into reality through clean code and innovative solutions.</p>
+        <p>With years of experience in the industry, I've worked on diverse projects ranging from small business
+            websites to complex enterprise applications. I'm committed to delivering high-quality work that exceeds
+            expectations.</p>
 
-    <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--primary-color);">Technologies I Work With</h3>
-    <div class="skills">
-      <span class="skill-tag">JavaScript</span>
-      <span class="skill-tag">React</span>
-      <span class="skill-tag">Node.js</span>
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">TypeScript</span>
-      <span class="skill-tag">SQL</span>
-      <span class="skill-tag">MongoDB</span>
-      <span class="skill-tag">Git</span>
-      <span class="skill-tag">AWS</span>
-      <span class="skill-tag">Docker</span>
+        <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--primary-color);">Technologies I Work With</h3>
+        <div class="skills">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Docker</span>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact">
-  <h2>Let's Work Together</h2>
-  <div class="contact-content">
-    <p>Have a project in mind? I'd love to hear about it. Let's discuss how I can help bring your ideas to life.</p>
+    <h2>Let's Work Together</h2>
+    <div class="contact-content">
+        <p>Have a project in mind? I'd love to hear about it. Let's discuss how I can help bring your ideas to life.</p>
 
-    <div class="contact-info">
-      <div class="contact-item">
-        <span>📧</span>
-        <a href="mailto:klemen@k2solutions.dev">klemen.kolesa@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <span>💼</span>
-        <a href="https://linkedin.com/in/klemen-kolesa" target="_blank">LinkedIn</a>
-      </div>
-      <div class="contact-item">
-        <span>💻</span>
-        <a href="https://github.com/scarfaceablo" target="_blank">GitHub</a>
-      </div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📧</span>
+                <a href="mailto:klemen@k2solutions.dev">klemen.kolesa@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span>💼</span>
+                <a href="https://linkedin.com/in/klemen-kolesa" target="_blank">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <span>💻</span>
+                <a href="https://github.com/scarfaceablo" target="_blank">GitHub</a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Footer -->
 <footer>
-  <p>&copy; 2025 K2 Solutions - Klemen Koleša. All rights reserved.</p>
+    <p>&copy; 2025 K2 Solutions - Klemen Koleša. All rights reserved.</p>
 </footer>
 
 <script>
-  // Theme Toggle Functionality
-  const themeToggle = document.getElementById('themeToggle');
-  const themeIcon = document.getElementById('themeIcon');
-  const html = document.documentElement;
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
 
-  // Check for saved theme preference or default to 'light'
-  const currentTheme = localStorage.getItem('theme') || 'light';
-  html.setAttribute('data-theme', currentTheme);
-  updateThemeIcon(currentTheme);
+    // Check for saved theme preference or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
 
-  themeToggle.addEventListener('click', function() {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    themeToggle.addEventListener('click', function () {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-  });
-
-  function updateThemeIcon(theme) {
-    themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
-  }
-
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
     });
-  });
 
-  // Add scroll effect to navigation
-  window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-      nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
-    } else {
-      nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    function updateThemeIcon(theme) {
+        themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
     }
-  });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add scroll effect to navigation
+    window.addEventListener('scroll', function () {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
+        } else {
+            nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        }
+    });
 </script>
 </body>
 </html>
