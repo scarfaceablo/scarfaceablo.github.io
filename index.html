@@ -4,325 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K2 Solutions - Freelance Software Development</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #0066cc;
-            --secondary-color: #004c99;
-            --dark-color: #1a1a1a;
-            --light-color: #f8f9fa;
-            --text-color: #333;
-            --accent-color: #00d4ff;
-            --bg-color: #ffffff;
-            --card-bg: #ffffff;
-            --nav-bg: #ffffff;
-            --section-bg: #f8f9fa;
-        }
-
-        [data-theme="dark"] {
-            --primary-color: #3399ff;
-            --secondary-color: #0066cc;
-            --dark-color: #f8f9fa;
-            --light-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --accent-color: #00d4ff;
-            --bg-color: #0a0a0a;
-            --card-bg: #1a1a1a;
-            --nav-bg: #0f0f0f;
-            --section-bg: #141414;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Navigation */
-        nav {
-            background: var(--nav-bg);
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 150px 2rem 100px;
-            text-align: center;
-            margin-top: 70px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease-out 0.2s backwards;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: white;
-            color: var(--primary-color);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 0.8s ease-out 0.4s backwards;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Section */
-        section {
-            padding: 80px 2rem;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--dark-color);
-        }
-
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-
-        .service-card h3 {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* About */
-        #about {
-            background: var(--section-bg);
-            transition: background-color 0.3s ease;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .skill-tag {
-            background: var(--card-bg);
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 500;
-            color: var(--primary-color);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
-
-        /* Contact */
-        #contact {
-            background: var(--bg-color);
-            color: var(--text-color);
-        }
-
-        #contact h2 {
-            color: var(--primary-color);
-        }
-
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-item a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-item a:hover {
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            background: #0a0a0a;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            background: var(--card-bg);
-            border: 2px solid var(--primary-color);
-            color: var(--text-color);
-            border-radius: 50px;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .theme-toggle:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            section h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <!-- Navigation -->
 <nav>
     <div class="container">
-        <div class="logo">K2 Solutions</div>
+        <div class="logo">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Mountain peak design representing K2 -->
+                <defs>
+                    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:var(--secondary-color);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Left peak (K) -->
+                <path d="M 15 80 L 30 30 L 35 30 L 35 80 Z" fill="url(#mountainGrad)"/>
+                <path d="M 35 50 L 50 30 L 58 38 L 40 60 Z" fill="url(#mountainGrad)"/>
+                <path d="M 40 60 L 58 80 L 50 80 L 35 63 Z" fill="url(#mountainGrad)"/>
+                <!-- Right peak (2) -->
+                <path d="M 65 35 Q 75 25 85 35 L 85 45 Q 75 35 65 45 L 85 65 L 85 80 L 65 80 L 65 70 L 75 60 Q 70 55 65 50 Z" fill="url(#mountainGrad)"/>
+            </svg>
+            <span class="logo-text">K2 Solutions</span>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
@@ -339,76 +44,230 @@
 
 <!-- Hero Section -->
 <section id="home" class="hero">
-    <h1>Building Digital Solutions</h1>
-    <p>Professional Software Development for Your Business</p>
-    <a href="#contact" class="cta-button">Get In Touch</a>
+    <div class="hero-animation">
+        <!-- Desktop Animation -->
+        <svg class="pipeline-animation desktop-animation" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pipeline paths -->
+            <defs>
+                <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgba(255,255,255,0.3);stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- Main pipelines -->
+            <path class="pipeline" d="M 0 100 L 800 100" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
+            <path class="pipeline" d="M 0 200 L 800 200" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
+            <path class="pipeline" d="M 0 300 L 800 300" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
+
+            <!-- Connecting lines to web app -->
+            <path class="pipeline" d="M 800 100 Q 850 100 900 150" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
+            <path class="pipeline" d="M 800 200 L 900 200" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
+            <path class="pipeline" d="M 800 300 Q 850 300 900 250" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
+
+            <!-- Data particles flowing through pipelines -->
+            <circle class="data-particle particle-1" r="4" fill="rgba(255,255,255,0.8)">
+                <animate attributeName="cx" from="0" to="900" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="cy" from="100" to="150" dur="4s" repeatCount="indefinite"/>
+            </circle>
+            <circle class="data-particle particle-2" r="4" fill="rgba(255,255,255,0.8)">
+                <animate attributeName="cx" from="-100" to="900" dur="5s" repeatCount="indefinite"/>
+                <animate attributeName="cy" values="200;200;200" dur="5s" repeatCount="indefinite"/>
+            </circle>
+            <circle class="data-particle particle-3" r="4" fill="rgba(255,255,255,0.8)">
+                <animate attributeName="cx" from="-200" to="900" dur="4.5s" repeatCount="indefinite"/>
+                <animate attributeName="cy" from="300" to="250" dur="4.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle class="data-particle particle-4" r="4" fill="rgba(255,255,255,0.7)">
+                <animate attributeName="cx" from="-50" to="900" dur="3.5s" repeatCount="indefinite"/>
+                <animate attributeName="cy" values="100;100;150" dur="3.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle class="data-particle particle-5" r="4" fill="rgba(255,255,255,0.7)">
+                <animate attributeName="cx" from="-150" to="900" dur="4.2s" repeatCount="indefinite"/>
+                <animate attributeName="cy" values="300;300;250" dur="4.2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Web Application Portal (right side) -->
+            <g class="webapp-portal" opacity="0.7">
+                <rect x="900" y="130" width="250" height="140" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                <!-- Portal header -->
+                <rect x="900" y="130" width="250" height="30" rx="8" fill="rgba(255,255,255,0.15)"/>
+                <circle cx="920" cy="145" r="4" fill="rgba(255,255,255,0.5)"/>
+                <circle cx="935" cy="145" r="4" fill="rgba(255,255,255,0.5)"/>
+                <circle cx="950" cy="145" r="4" fill="rgba(255,255,255,0.5)"/>
+
+                <!-- Portal content lines -->
+                <rect x="920" y="175" width="80" height="8" rx="2" fill="rgba(255,255,255,0.2)">
+                    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="920" y="195" width="120" height="8" rx="2" fill="rgba(255,255,255,0.2)">
+                    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2.5s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="920" y="215" width="100" height="8" rx="2" fill="rgba(255,255,255,0.2)">
+                    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="920" y="235" width="90" height="8" rx="2" fill="rgba(255,255,255,0.2)">
+                    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2.2s" repeatCount="indefinite"/>
+                </rect>
+
+                <!-- Dashboard elements -->
+                <rect x="1060" y="175" width="70" height="40" rx="4" fill="rgba(255,255,255,0.15)">
+                    <animate attributeName="opacity" values="0.15;0.3;0.15" dur="3s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="1060" y="225" width="70" height="35" rx="4" fill="rgba(255,255,255,0.15)">
+                    <animate attributeName="opacity" values="0.15;0.3;0.15" dur="2.5s" repeatCount="indefinite"/>
+                </rect>
+            </g>
+        </svg>
+
+        <!-- Mobile Animation (Bottom to Top) -->
+        <svg class="pipeline-animation mobile-animation" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <linearGradient id="pipeGradMobile" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgba(255,255,255,0.4);stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- Vertical pipelines flowing upward -->
+            <path class="pipeline" d="M 100 600 L 100 50" stroke="url(#pipeGradMobile)" stroke-width="4" fill="none" opacity="0.7"/>
+            <path class="pipeline" d="M 200 600 L 200 50" stroke="url(#pipeGradMobile)" stroke-width="4" fill="none" opacity="0.7"/>
+            <path class="pipeline" d="M 300 600 L 300 50" stroke="url(#pipeGradMobile)" stroke-width="4" fill="none" opacity="0.7"/>
+
+            <!-- Connecting lines to web app at top -->
+            <path class="pipeline" d="M 100 50 Q 100 30 150 20" stroke="url(#pipeGradMobile)" stroke-width="3" fill="none" opacity="0.7"/>
+            <path class="pipeline" d="M 200 50 L 200 20" stroke="url(#pipeGradMobile)" stroke-width="3" fill="none" opacity="0.7"/>
+            <path class="pipeline" d="M 300 50 Q 300 30 250 20" stroke="url(#pipeGradMobile)" stroke-width="3" fill="none" opacity="0.7"/>
+
+            <!-- Data particles flowing upward -->
+            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.9)">
+                <animate attributeName="cx" values="100;100;150" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="cy" from="600" to="20" dur="4s" repeatCount="indefinite"/>
+            </circle>
+            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.9)">
+                <animate attributeName="cx" values="200;200;200" dur="3.5s" repeatCount="indefinite"/>
+                <animate attributeName="cy" from="600" to="20" dur="3.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.9)">
+                <animate attributeName="cx" values="300;300;250" dur="4.2s" repeatCount="indefinite"/>
+                <animate attributeName="cy" from="600" to="20" dur="4.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.8)">
+                <animate attributeName="cx" values="100;100;150" dur="5s" repeatCount="indefinite"/>
+                <animate attributeName="cy" from="600" to="20" dur="5s" repeatCount="indefinite"/>
+            </circle>
+            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.8)">
+                <animate attributeName="cx" values="200;200;200" dur="4.5s" repeatCount="indefinite"/>
+                <animate attributeName="cy" from="600" to="20" dur="4.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.8)">
+                <animate attributeName="cx" values="300;300;250" dur="3.8s" repeatCount="indefinite"/>
+                <animate attributeName="cy" from="600" to="20" dur="3.8s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Web Application Portal at top -->
+            <g class="webapp-portal" opacity="0.8">
+                <rect x="120" y="10" width="160" height="100" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                <!-- Portal header -->
+                <rect x="120" y="10" width="160" height="20" rx="6" fill="rgba(255,255,255,0.2)"/>
+                <circle cx="135" cy="20" r="3" fill="rgba(255,255,255,0.6)"/>
+                <circle cx="145" cy="20" r="3" fill="rgba(255,255,255,0.6)"/>
+                <circle cx="155" cy="20" r="3" fill="rgba(255,255,255,0.6)"/>
+
+                <!-- Portal content -->
+                <rect x="135" y="40" width="50" height="6" rx="2" fill="rgba(255,255,255,0.25)">
+                    <animate attributeName="opacity" values="0.25;0.6;0.25" dur="2s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="135" y="55" width="80" height="6" rx="2" fill="rgba(255,255,255,0.25)">
+                    <animate attributeName="opacity" values="0.25;0.6;0.25" dur="2.5s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="135" y="70" width="60" height="6" rx="2" fill="rgba(255,255,255,0.25)">
+                    <animate attributeName="opacity" values="0.25;0.6;0.25" dur="3s" repeatCount="indefinite"/>
+                </rect>
+
+                <!-- Dashboard elements -->
+                <rect x="230" y="40" width="35" height="25" rx="3" fill="rgba(255,255,255,0.2)">
+                    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="230" y="75" width="35" height="25" rx="3" fill="rgba(255,255,255,0.2)">
+                    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2.5s" repeatCount="indefinite"/>
+                </rect>
+            </g>
+        </svg>
+    </div>
+    <div class="hero-content">
+        <h1>Data Engineering & Software Development</h1>
+        <p>Custom Data Pipelines, ETL Solutions & Scalable Applications</p>
+        <a href="#contact" class="cta-button">Start Your Project</a>
+    </div>
 </section>
 
 <!-- Services Section -->
 <section id="services">
-    <h2>What I Do</h2>
+    <h2>Services</h2>
     <div class="services-grid">
         <div class="service-card">
-            <div class="service-icon">💻</div>
-            <h3>Web Development</h3>
-            <p>Custom websites and web applications built with modern technologies. Responsive, fast, and user-friendly
-                solutions tailored to your needs.</p>
+            <div class="service-icon">🔄</div>
+            <h3>Custom Data Pipelines & ETL</h3>
+            <p>Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing with Python, Apache Airflow, and modern orchestration tools.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon">📱</div>
-            <h3>Mobile Apps</h3>
-            <p>Cross-platform mobile applications that work seamlessly on iOS and Android. Native performance with
-                efficient development.</p>
+            <div class="service-icon">📊</div>
+            <h3>Data Integration & Migration</h3>
+            <p>Seamless integration between diverse data sources - databases, APIs, cloud services, and legacy systems. Data migration strategies that ensure accuracy, consistency, and minimal downtime.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">⚙️</div>
-            <h3>Backend Systems</h3>
-            <p>Robust server-side solutions, APIs, and database architecture. Scalable and secure infrastructure for
-                your applications.</p>
+            <h3>Data Processing & Transformation</h3>
+            <p>Complex data transformation logic, cleansing, and enrichment. Building scalable data processing systems using Python (Pandas, PySpark), SQL, and cloud-native services for handling large-scale datasets.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon">🎨</div>
-            <h3>UI/UX Design</h3>
-            <p>Clean, intuitive interfaces that provide excellent user experience. Modern designs that align with your
-                brand identity.</p>
+            <div class="service-icon">☁️</div>
+            <h3>Cloud Data Solutions</h3>
+            <p>Cloud-based data infrastructure on GCP and Azure. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Full-Stack Web Development</h3>
+            <p>End-to-end web application development using modern frameworks like Vue.js, Quasar, Node.js, and Python. Data-driven dashboards and applications that visualize and interact with your data pipelines.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">🔧</div>
-            <h3>Maintenance & Support</h3>
-            <p>Ongoing support, updates, and optimization for your existing applications. Keep your software running
-                smoothly.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon">💡</div>
-            <h3>Consulting</h3>
-            <p>Technical guidance and strategic planning for your projects. From idea to implementation, I'll help you
-                succeed.</p>
+            <h3>API Development & Integration</h3>
+            <p>RESTful APIs, GraphQL services, and third-party integrations. Robust backend systems with MongoDB, PostgreSQL, and modern data access patterns for your applications.</p>
         </div>
     </div>
 </section>
 
 <!-- About Section -->
 <section id="about">
-    <h2>About Me</h2>
+    <h2>About K2 Solutions</h2>
     <div class="about-content">
-        <p>Hi! I'm Klemen Koleša, a passionate software developer with expertise in building modern, efficient, and
-            scalable applications. I turn ideas into reality through clean code and innovative solutions.</p>
-        <p>With years of experience in the industry, I've worked on diverse projects ranging from small business
-            websites to complex enterprise applications. I'm committed to delivering high-quality work that exceeds
-            expectations.</p>
+        <p>K2 Solutions is a freelance data engineering and software development service founded by Klemen Koleša. I specialize in building custom data pipelines, ETL solutions, and modern applications that turn raw data into actionable insights.</p>
+        <p>With deep expertise in data engineering, I help businesses automate their data workflows, integrate disparate data sources, and build scalable data infrastructure. From small-scale data transformations to enterprise-level data pipelines, I deliver solutions that are reliable, efficient, and maintainable.</p>
+        <p>My approach combines data engineering best practices with full-stack development capabilities, enabling me to build complete solutions - from data ingestion and processing to visualization and application development. I work with startups and established companies to solve complex data challenges and build data-driven applications.</p>
 
-        <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--primary-color);">Technologies I Work With</h3>
+        <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--primary-color);">Technical Expertise</h3>
         <div class="skills">
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Node.js</span>
             <span class="skill-tag">Python</span>
-            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Pandas/PySpark</span>
+            <span class="skill-tag">Apache Airflow</span>
+            <span class="skill-tag">ETL Pipelines</span>
             <span class="skill-tag">SQL</span>
+            <span class="skill-tag">PostgreSQL</span>
             <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Google Cloud Platform</span>
+            <span class="skill-tag">Azure</span>
             <span class="skill-tag">Docker</span>
+            <span class="skill-tag">JavaScript/TypeScript</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">Quasar</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Flask/Django</span>
+            <span class="skill-tag">RESTful APIs</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Git</span>
         </div>
     </div>
 </section>
@@ -417,20 +276,20 @@
 <section id="contact">
     <h2>Let's Work Together</h2>
     <div class="contact-content">
-        <p>Have a project in mind? I'd love to hear about it. Let's discuss how I can help bring your ideas to life.</p>
+        <p>Ready to start your next data engineering or software development project? I'm available for freelance work and consulting. Let's discuss how I can help build custom data pipelines, ETL solutions, or transform your data infrastructure.</p>
 
         <div class="contact-info">
             <div class="contact-item">
                 <span>📧</span>
-                <a href="mailto:klemen@k2solutions.dev">klemen.kolesa@gmail.com</a>
+                <a href="mailto:klemen.kolesa@gmail.com">klemen.kolesa@gmail.com</a>
             </div>
             <div class="contact-item">
                 <span>💼</span>
-                <a href="https://linkedin.com/in/klemen-kolesa" target="_blank">LinkedIn</a>
+                <a href="https://linkedin.com/in/klemen-kolesa" target="_blank">LinkedIn Profile</a>
             </div>
             <div class="contact-item">
                 <span>💻</span>
-                <a href="https://github.com/scarfaceablo" target="_blank">GitHub</a>
+                <a href="https://github.com/scarfaceablo" target="_blank">GitHub Portfolio</a>
             </div>
         </div>
     </div>
@@ -447,8 +306,8 @@
     const themeIcon = document.getElementById('themeIcon');
     const html = document.documentElement;
 
-    // Check for saved theme preference or default to 'light'
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem('theme') || 'dark';
     html.setAttribute('data-theme', currentTheme);
     updateThemeIcon(currentTheme);
 
