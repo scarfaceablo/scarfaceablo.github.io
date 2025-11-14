@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K2 Solutions - Freelance Software Development</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,28 +15,19 @@
 <nav>
     <div class="container">
         <div class="logo">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <!-- Mountain peak design representing K2 -->
-                <defs>
-                    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:var(--primary-color);stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:var(--secondary-color);stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <!-- Left peak (K) -->
-                <path d="M 15 80 L 30 30 L 35 30 L 35 80 Z" fill="url(#mountainGrad)"/>
-                <path d="M 35 50 L 50 30 L 58 38 L 40 60 Z" fill="url(#mountainGrad)"/>
-                <path d="M 40 60 L 58 80 L 50 80 L 35 63 Z" fill="url(#mountainGrad)"/>
-                <!-- Right peak (2) -->
-                <path d="M 65 35 Q 75 25 85 35 L 85 45 Q 75 35 65 45 L 85 65 L 85 80 L 65 80 L 65 70 L 75 60 Q 70 55 65 50 Z" fill="url(#mountainGrad)"/>
-            </svg>
-            <span class="logo-text">K2 Solutions</span>
+            <img src="k2-solutions-high-resolution-logo-transparent.png" alt="K2 Solutions Logo" class="logo-img logo-color">
+            <img src="k2-solutions-high-resolution-logo-grayscale-transparent.png" alt="K2 Solutions Logo" class="logo-img logo-grayscale">
         </div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-en="Home" data-sl="Domov">Home</a></li>
+            <li><a href="#services" data-en="Services" data-sl="Storitve">Services</a></li>
+            <li><a href="#about" data-en="About" data-sl="O meni">About</a></li>
+            <li><a href="#contact" data-en="Contact" data-sl="Kontakt">Contact</a></li>
+            <li>
+                <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                    <span id="langIcon">EN</span>
+                </button>
+            </li>
             <li>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <span id="themeIcon">🌙</span>
@@ -196,58 +191,58 @@
         </svg>
     </div>
     <div class="hero-content">
-        <h1>Data Engineering & Software Development</h1>
-        <p>Custom Data Pipelines, ETL Solutions & Scalable Applications</p>
-        <a href="#contact" class="cta-button">Start Your Project</a>
+        <h1 data-en="Data Engineering & Software Development" data-sl="Podatkovni inženiring & Razvoj programske opreme">Data Engineering & Software Development</h1>
+        <p data-en="Custom Data Pipelines, ETL Solutions & Scalable Applications" data-sl="Podatkovni cevovodi po meri, ETL rešitve & Skalabilne aplikacije">Custom Data Pipelines, ETL Solutions & Scalable Applications</p>
+        <a href="#contact" class="cta-button" data-en="Start Your Project" data-sl="Začnite projekt">Start Your Project</a>
     </div>
 </section>
 
 <!-- Services Section -->
 <section id="services">
-    <h2>Services</h2>
+    <h2 data-en="Services" data-sl="Storitve">Services</h2>
     <div class="services-grid">
         <div class="service-card">
             <div class="service-icon">🔄</div>
-            <h3>Custom Data Pipelines & ETL</h3>
-            <p>Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing with Python, Apache Airflow, and modern orchestration tools.</p>
+            <h3 data-en="Custom Data Pipelines & ETL" data-sl="Podatkovni cevovodi & ETL po meri">Custom Data Pipelines & ETL</h3>
+            <p data-en="Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing with Python, Apache Airflow, and modern orchestration tools." data-sl="Načrtovanje in implementacija robustnih podatkovnih cevovodov za pridobivanje, transformacijo in nalaganje podatkov. Avtomatizirani procesi za paketno in sprotno obdelavo podatkov s Python, Apache Airflow in modernimi orkestracijskih orodji.">Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing with Python, Apache Airflow, and modern orchestration tools.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">📊</div>
-            <h3>Data Integration & Migration</h3>
-            <p>Seamless integration between diverse data sources - databases, APIs, cloud services, and legacy systems. Data migration strategies that ensure accuracy, consistency, and minimal downtime.</p>
+            <h3 data-en="Data Integration & Migration" data-sl="Integracija & Migracija podatkov">Data Integration & Migration</h3>
+            <p data-en="Seamless integration between diverse data sources - databases, APIs, cloud services, and legacy systems. Data migration strategies that ensure accuracy, consistency, and minimal downtime." data-sl="Brezšivna integracija med različnimi viri podatkov - bazami podatkov, API-ji, oblakom in starejšimi sistemi. Strategije migracije podatkov, ki zagotavljajo točnost, doslednost in minimalen izpad delovanja.">Seamless integration between diverse data sources - databases, APIs, cloud services, and legacy systems. Data migration strategies that ensure accuracy, consistency, and minimal downtime.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">⚙️</div>
-            <h3>Data Processing & Transformation</h3>
-            <p>Complex data transformation logic, cleansing, and enrichment. Building scalable data processing systems using Python (Pandas, PySpark), SQL, and cloud-native services for handling large-scale datasets.</p>
+            <h3 data-en="Data Processing & Transformation" data-sl="Obdelava & Transformacija podatkov">Data Processing & Transformation</h3>
+            <p data-en="Complex data transformation logic, cleansing, and enrichment. Building scalable data processing systems using Python (Pandas, PySpark), SQL, and cloud-native services for handling large-scale datasets." data-sl="Kompleksna logika transformacije podatkov, čiščenje in obogatitev. Gradnja skalabilnih sistemov za obdelavo podatkov z uporabo Python (Pandas, PySpark), SQL in oblakom prilagojenih storitev za upravljanje obsežnih podatkovnih nizov.">Complex data transformation logic, cleansing, and enrichment. Building scalable data processing systems using Python (Pandas, PySpark), SQL, and cloud-native services for handling large-scale datasets.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">☁️</div>
-            <h3>Cloud Data Solutions</h3>
-            <p>Cloud-based data infrastructure on GCP and Azure. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations.</p>
+            <h3 data-en="Cloud Data Solutions" data-sl="Oblačne podatkovne rešitve">Cloud Data Solutions</h3>
+            <p data-en="Cloud-based data infrastructure on GCP and Azure. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations." data-sl="Oblačna podatkovna infrastruktura na GCP in Azure. Podatkovne skladiščnice, rešitve za jezera podatkov in strežniško neodvisna obdelava podatkov. Optimizirane arhitekture za stroškovno učinkovite, skalabilne podatkovne operacije.">Cloud-based data infrastructure on GCP and Azure. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">💻</div>
-            <h3>Full-Stack Web Development</h3>
-            <p>End-to-end web application development using modern frameworks like Vue.js, Quasar, Node.js, and Python. Data-driven dashboards and applications that visualize and interact with your data pipelines.</p>
+            <h3 data-en="Full-Stack Web Development" data-sl="Full-Stack spletni razvoj">Full-Stack Web Development</h3>
+            <p data-en="End-to-end web application development using modern frameworks like Vue.js, Quasar, Node.js, and Python. Data-driven dashboards and applications that visualize and interact with your data pipelines." data-sl="Celovit razvoj spletnih aplikacij z uporabo sodobnih ogrodij kot so Vue.js, Quasar, Node.js in Python. Podatkovne nadzorne plošče in aplikacije, ki vizualizirajo in interaktivno delujejo z vašimi podatkovnimi cevovodi.">End-to-end web application development using modern frameworks like Vue.js, Quasar, Node.js, and Python. Data-driven dashboards and applications that visualize and interact with your data pipelines.</p>
         </div>
         <div class="service-card">
             <div class="service-icon">🔧</div>
-            <h3>API Development & Integration</h3>
-            <p>RESTful APIs, GraphQL services, and third-party integrations. Robust backend systems with MongoDB, PostgreSQL, and modern data access patterns for your applications.</p>
+            <h3 data-en="API Development & Integration" data-sl="Razvoj & Integracija API-jev">API Development & Integration</h3>
+            <p data-en="RESTful APIs, GraphQL services, and third-party integrations. Robust backend systems with MongoDB, PostgreSQL, and modern data access patterns for your applications." data-sl="RESTful API-ji, GraphQL storitve in integracije tretjih oseb. Robustni zaledni sistemi z MongoDB, PostgreSQL in sodobnimi vzorci dostopa do podatkov za vaše aplikacije.">RESTful APIs, GraphQL services, and third-party integrations. Robust backend systems with MongoDB, PostgreSQL, and modern data access patterns for your applications.</p>
         </div>
     </div>
 </section>
 
 <!-- About Section -->
 <section id="about">
-    <h2>About K2 Solutions</h2>
+    <h2 data-en="About K2 Solutions" data-sl="O K2 Solutions">About K2 Solutions</h2>
     <div class="about-content">
-        <p>K2 Solutions is a freelance data engineering and software development service founded by Klemen Koleša. I specialize in building custom data pipelines, ETL solutions, and modern applications that turn raw data into actionable insights.</p>
-        <p>With deep expertise in data engineering, I help businesses automate their data workflows, integrate disparate data sources, and build scalable data infrastructure. From small-scale data transformations to enterprise-level data pipelines, I deliver solutions that are reliable, efficient, and maintainable.</p>
-        <p>My approach combines data engineering best practices with full-stack development capabilities, enabling me to build complete solutions - from data ingestion and processing to visualization and application development. I work with startups and established companies to solve complex data challenges and build data-driven applications.</p>
+        <p data-en="K2 Solutions is a freelance data engineering and software development service founded by Klemen Koleša. I specialize in building custom data pipelines, ETL solutions, and modern applications that turn raw data into actionable insights." data-sl="K2 Solutions je freelance storitev podatkovnega inženiringa in razvoja programske opreme, ki jo je ustanovil Klemen Koleša. Specializiran sem za gradnjo podatkovnih cevovodov po meri, ETL rešitev in sodobnih aplikacij, ki surove podatke spremenijo v uporabne vpoglede.">K2 Solutions is a freelance data engineering and software development service founded by Klemen Koleša. I specialize in building custom data pipelines, ETL solutions, and modern applications that turn raw data into actionable insights.</p>
+        <p data-en="With deep expertise in data engineering, I help businesses automate their data workflows, integrate disparate data sources, and build scalable data infrastructure. From small-scale data transformations to enterprise-level data pipelines, I deliver solutions that are reliable, efficient, and maintainable." data-sl="Z globokim strokovnim znanjem na področju podatkovnega inženiringa pomagam podjetjem avtomatizirati podatkovne procese, integrirati različne vire podatkov in graditi skalabilno podatkovno infrastrukturo. Od manjših podatkovnih transformacij do podatkovnih cevovodov na ravni podjetja dostavljam rešitve, ki so zanesljive, učinkovite in vzdrževane.">With deep expertise in data engineering, I help businesses automate their data workflows, integrate disparate data sources, and build scalable data infrastructure. From small-scale data transformations to enterprise-level data pipelines, I deliver solutions that are reliable, efficient, and maintainable.</p>
+        <p data-en="My approach combines data engineering best practices with full-stack development capabilities, enabling me to build complete solutions - from data ingestion and processing to visualization and application development. I work with startups and established companies to solve complex data challenges and build data-driven applications." data-sl="Moj pristop združuje najboljše prakse podatkovnega inženiringa s polnim spektrom razvojnih zmožnosti, kar mi omogoča gradnjo celovitih rešitev - od pridobivanja in obdelave podatkov do vizualizacije in razvoja aplikacij. Sodelujem s startup podjetji in uveljavljenimi podjetji pri reševanju kompleksnih podatkovnih izzivov in gradnji podatkovnih aplikacij.">My approach combines data engineering best practices with full-stack development capabilities, enabling me to build complete solutions - from data ingestion and processing to visualization and application development. I work with startups and established companies to solve complex data challenges and build data-driven applications.</p>
 
-        <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--primary-color);">Technical Expertise</h3>
+        <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--primary-color);" data-en="Technical Expertise" data-sl="Tehnično znanje">Technical Expertise</h3>
         <div class="skills">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">Pandas/PySpark</span>
@@ -274,9 +269,9 @@
 
 <!-- Contact Section -->
 <section id="contact">
-    <h2>Let's Work Together</h2>
+    <h2 data-en="Let's Work Together" data-sl="Sodelujmo skupaj">Let's Work Together</h2>
     <div class="contact-content">
-        <p>Ready to start your next data engineering or software development project? I'm available for freelance work and consulting. Let's discuss how I can help build custom data pipelines, ETL solutions, or transform your data infrastructure.</p>
+        <p data-en="Ready to start your next data engineering or software development project? I'm available for freelance work and consulting. Let's discuss how I can help build custom data pipelines, ETL solutions, or transform your data infrastructure." data-sl="Pripravljeni začeti vaš naslednji projekt podatkovnega inženiringa ali razvoja programske opreme? Na voljo sem za freelance delo in svetovanje. Pogovorimo se, kako lahko pomagam zgraditi podatkovne cevovode po meri, ETL rešitve ali transformirati vašo podatkovno infrastrukturo.">Ready to start your next data engineering or software development project? I'm available for freelance work and consulting. Let's discuss how I can help build custom data pipelines, ETL solutions, or transform your data infrastructure.</p>
 
         <div class="contact-info">
             <div class="contact-item">
@@ -285,11 +280,11 @@
             </div>
             <div class="contact-item">
                 <span>💼</span>
-                <a href="https://linkedin.com/in/klemen-kolesa" target="_blank">LinkedIn Profile</a>
+                <a href="https://linkedin.com/in/klemen-kolesa" target="_blank" data-en="LinkedIn Profile" data-sl="LinkedIn profil">LinkedIn Profile</a>
             </div>
             <div class="contact-item">
                 <span>💻</span>
-                <a href="https://github.com/scarfaceablo" target="_blank">GitHub Portfolio</a>
+                <a href="https://github.com/scarfaceablo" target="_blank" data-en="GitHub Portfolio" data-sl="GitHub portfelj">GitHub Portfolio</a>
             </div>
         </div>
     </div>
@@ -297,14 +292,58 @@
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2025 K2 Solutions - Klemen Koleša. All rights reserved.</p>
+    <p data-en="&copy; 2025 K2 Solutions - Klemen Koleša. All rights reserved." data-sl="&copy; 2025 K2 Solutions - Klemen Koleša. Vse pravice pridržane.">&copy; 2025 K2 Solutions - Klemen Koleša. All rights reserved.</p>
 </footer>
 
 <script>
+    // Language Toggle Functionality
+    const langToggle = document.getElementById('langToggle');
+    const langIcon = document.getElementById('langIcon');
+    const html = document.documentElement;
+
+    // Check for saved language preference or default to 'en'
+    const currentLang = localStorage.getItem('lang') || 'en';
+    html.setAttribute('data-lang', currentLang);
+    html.setAttribute('lang', currentLang);
+    updateLanguage(currentLang);
+    updateLangIcon(currentLang);
+
+    langToggle.addEventListener('click', function () {
+        const currentLang = html.getAttribute('data-lang');
+        const newLang = currentLang === 'en' ? 'sl' : 'en';
+
+        html.setAttribute('data-lang', newLang);
+        html.setAttribute('lang', newLang);
+        localStorage.setItem('lang', newLang);
+        updateLanguage(newLang);
+        updateLangIcon(newLang);
+    });
+
+    function updateLanguage(lang) {
+        // Update page title
+        if (lang === 'sl') {
+            document.title = 'K2 Solutions - Freelance razvoj programske opreme';
+        } else {
+            document.title = 'K2 Solutions - Freelance Software Development';
+        }
+
+        // Update all elements with language attributes
+        document.querySelectorAll('[data-en][data-sl]').forEach(element => {
+            if (lang === 'sl') {
+                element.textContent = element.getAttribute('data-sl');
+            } else {
+                element.textContent = element.getAttribute('data-en');
+            }
+        });
+    }
+
+    function updateLangIcon(lang) {
+        langIcon.textContent = lang === 'en' ? 'SL' : 'EN';
+    }
+
     // Theme Toggle Functionality
     const themeToggle = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
-    const html = document.documentElement;
 
     // Check for saved theme preference or default to 'dark'
     const currentTheme = localStorage.getItem('theme') || 'dark';

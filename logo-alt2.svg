@@ -1,0 +1,42 @@
+<!-- Alternative K2 Solutions Logo - Circular Data Flow Style -->
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#004c99;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <!-- Circular orbit rings -->
+    <circle cx="50" cy="50" r="42" fill="none" stroke="url(#circleGrad)" stroke-width="2" opacity="0.3"/>
+    <circle cx="50" cy="50" r="35" fill="none" stroke="url(#circleGrad)" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- K2 text in center with modern font -->
+    <text x="50" y="62" font-family="Arial, sans-serif" font-size="36" font-weight="bold"
+          fill="url(#circleGrad)" text-anchor="middle">K2</text>
+
+    <!-- Orbiting data nodes -->
+    <circle r="4" fill="url(#accentGrad)">
+        <animateMotion dur="6s" repeatCount="indefinite"
+                       path="M 50,8 A 42,42 0 1,1 49,8 Z"/>
+    </circle>
+    <circle r="3" fill="url(#accentGrad)" opacity="0.8">
+        <animateMotion dur="8s" repeatCount="indefinite"
+                       path="M 50,15 A 35,35 0 1,1 49,15 Z"/>
+    </circle>
+    <circle r="3" fill="url(#accentGrad)" opacity="0.7">
+        <animateMotion dur="7s" repeatCount="indefinite" begin="3s"
+                       path="M 50,8 A 42,42 0 1,1 49,8 Z"/>
+    </circle>
+
+    <!-- Connection lines showing data flow -->
+    <path d="M 50 50 L 50 8" stroke="url(#accentGrad)" stroke-width="1" opacity="0.3" stroke-dasharray="3,3">
+        <animateTransform attributeName="transform" type="rotate"
+                          from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"/>
+    </path>
+</svg>
+
