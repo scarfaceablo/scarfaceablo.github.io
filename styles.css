@@ -294,6 +294,12 @@ section h2 {
     margin-bottom: 1rem;
 }
 
+.service-card .tech-term {
+    color: var(--primary-color);
+    font-weight: 500;
+    opacity: 0.9;
+}
+
 .service-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
