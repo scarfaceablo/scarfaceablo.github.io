@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +19,10 @@
             <img src="k2-solutions-high-resolution-logo-transparent.png" alt="K2 Solutions Logo" class="logo-img logo-color">
             <img src="k2-solutions-high-resolution-logo-grayscale-transparent.png" alt="K2 Solutions Logo" class="logo-img logo-grayscale">
         </div>
-        <ul class="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home" data-en="Home" data-sl="Domov">Home</a></li>
             <li><a href="#services" data-en="Services" data-sl="Storitve">Services</a></li>
             <li><a href="#about" data-en="About" data-sl="O meni">About</a></li>
@@ -30,7 +34,7 @@
             </li>
             <li>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <span id="themeIcon">🌙</span>
+                    <span id="themeIcon" class="material-symbols-outlined">dark_mode</span>
                 </button>
             </li>
         </ul>
@@ -202,32 +206,32 @@
     <h2 data-en="Services" data-sl="Storitve">Services</h2>
     <div class="services-grid">
         <div class="service-card">
-            <div class="service-icon">🔄</div>
+            <div class="service-icon"><span class="material-symbols-outlined">hub</span></div>
             <h3 data-en="Custom Data Pipelines & ETL" data-sl="Podatkovni cevovodi & ETL po meri">Custom Data Pipelines & ETL</h3>
             <p data-en="Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing with Python, Apache Airflow, and modern orchestration tools." data-sl="Načrtovanje in implementacija robustnih podatkovnih cevovodov za pridobivanje, transformacijo in nalaganje podatkov. Avtomatizirani procesi za paketno in sprotno obdelavo podatkov s Python, Apache Airflow in modernimi orkestracijskih orodji.">Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing with Python, Apache Airflow, and modern orchestration tools.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon">📊</div>
+            <div class="service-icon"><span class="material-symbols-outlined">analytics</span></div>
             <h3 data-en="Data Integration & Migration" data-sl="Integracija & Migracija podatkov">Data Integration & Migration</h3>
             <p data-en="Seamless integration between diverse data sources - databases, APIs, cloud services, and legacy systems. Data migration strategies that ensure accuracy, consistency, and minimal downtime." data-sl="Brezšivna integracija med različnimi viri podatkov - bazami podatkov, API-ji, oblakom in starejšimi sistemi. Strategije migracije podatkov, ki zagotavljajo točnost, doslednost in minimalen izpad delovanja.">Seamless integration between diverse data sources - databases, APIs, cloud services, and legacy systems. Data migration strategies that ensure accuracy, consistency, and minimal downtime.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon">⚙️</div>
+            <div class="service-icon"><span class="material-symbols-outlined">transform</span></div>
             <h3 data-en="Data Processing & Transformation" data-sl="Obdelava & Transformacija podatkov">Data Processing & Transformation</h3>
             <p data-en="Complex data transformation logic, cleansing, and enrichment. Building scalable data processing systems using Python (Pandas, PySpark), SQL, and cloud-native services for handling large-scale datasets." data-sl="Kompleksna logika transformacije podatkov, čiščenje in obogatitev. Gradnja skalabilnih sistemov za obdelavo podatkov z uporabo Python (Pandas, PySpark), SQL in oblakom prilagojenih storitev za upravljanje obsežnih podatkovnih nizov.">Complex data transformation logic, cleansing, and enrichment. Building scalable data processing systems using Python (Pandas, PySpark), SQL, and cloud-native services for handling large-scale datasets.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon">☁️</div>
+            <div class="service-icon"><span class="material-symbols-outlined">cloud</span></div>
             <h3 data-en="Cloud Data Solutions" data-sl="Oblačne podatkovne rešitve">Cloud Data Solutions</h3>
             <p data-en="Cloud-based data infrastructure on GCP and Azure. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations." data-sl="Oblačna podatkovna infrastruktura na GCP in Azure. Podatkovne skladiščnice, rešitve za jezera podatkov in strežniško neodvisna obdelava podatkov. Optimizirane arhitekture za stroškovno učinkovite, skalabilne podatkovne operacije.">Cloud-based data infrastructure on GCP and Azure. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon">💻</div>
+            <div class="service-icon"><span class="material-symbols-outlined">code</span></div>
             <h3 data-en="Full-Stack Web Development" data-sl="Full-Stack spletni razvoj">Full-Stack Web Development</h3>
             <p data-en="End-to-end web application development using modern frameworks like Vue.js, Quasar, Node.js, and Python. Data-driven dashboards and applications that visualize and interact with your data pipelines." data-sl="Celovit razvoj spletnih aplikacij z uporabo sodobnih ogrodij kot so Vue.js, Quasar, Node.js in Python. Podatkovne nadzorne plošče in aplikacije, ki vizualizirajo in interaktivno delujejo z vašimi podatkovnimi cevovodi.">End-to-end web application development using modern frameworks like Vue.js, Quasar, Node.js, and Python. Data-driven dashboards and applications that visualize and interact with your data pipelines.</p>
         </div>
         <div class="service-card">
-            <div class="service-icon">🔧</div>
+            <div class="service-icon"><span class="material-symbols-outlined">api</span></div>
             <h3 data-en="API Development & Integration" data-sl="Razvoj & Integracija API-jev">API Development & Integration</h3>
             <p data-en="RESTful APIs, GraphQL services, and third-party integrations. Robust backend systems with MongoDB, PostgreSQL, and modern data access patterns for your applications." data-sl="RESTful API-ji, GraphQL storitve in integracije tretjih oseb. Robustni zaledni sistemi z MongoDB, PostgreSQL in sodobnimi vzorci dostopa do podatkov za vaše aplikacije.">RESTful APIs, GraphQL services, and third-party integrations. Robust backend systems with MongoDB, PostgreSQL, and modern data access patterns for your applications.</p>
         </div>
@@ -275,15 +279,15 @@
 
         <div class="contact-info">
             <div class="contact-item">
-                <span>📧</span>
+                <span class="material-symbols-outlined">mail</span>
                 <a href="mailto:klemen.kolesa@gmail.com">klemen.kolesa@gmail.com</a>
             </div>
             <div class="contact-item">
-                <span>💼</span>
+                <span class="material-symbols-outlined">work</span>
                 <a href="https://linkedin.com/in/klemen-kolesa" target="_blank" data-en="LinkedIn Profile" data-sl="LinkedIn profil">LinkedIn Profile</a>
             </div>
             <div class="contact-item">
-                <span>💻</span>
+                <span class="material-symbols-outlined">code</span>
                 <a href="https://github.com/scarfaceablo" target="_blank" data-en="GitHub Portfolio" data-sl="GitHub portfelj">GitHub Portfolio</a>
             </div>
         </div>
@@ -360,8 +364,31 @@
     });
 
     function updateThemeIcon(theme) {
-        themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
+        themeIcon.textContent = theme === 'light' ? 'dark_mode' : 'light_mode';
     }
+
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const hamburgerIcon = hamburger.querySelector('.material-symbols-outlined');
+
+    hamburger.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+        // Toggle between menu and close icons
+        if (navLinks.classList.contains('active')) {
+            hamburgerIcon.textContent = 'close';
+        } else {
+            hamburgerIcon.textContent = 'menu';
+        }
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.classList.remove('active');
+            hamburgerIcon.textContent = 'menu';
+        });
+    });
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
