@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K2 Solutions - Data Engineering & Software Development | Slovenia</title>
-    <meta name="description" content="K2 Solutions by Klemen Koleša — freelance data engineering and software development in Slovenia. Custom data pipelines, ETL solutions, AI agents, full-stack web development. Python, Airflow, Vue.js, GCP, Azure.">
-    <meta name="keywords" content="data engineering Slovenia, software development Slovenia, freelance developer Slovenia, ETL pipelines, data pipelines, Python developer, AI agents, full-stack developer, Klemen Koleša, K2 Solutions, podatkovni inženiring Slovenija, razvoj programske opreme Slovenija">
+    <title>K2 Solutions - Custom Software Solutions | Slovenia</title>
+    <meta name="description" content="K2 Solutions — custom software solutions company in Slovenia. Full-stack web applications, data platforms, AI integrations, and cloud infrastructure, built end-to-end with the right stack for each project.">
+    <meta name="keywords" content="custom software solutions Slovenia, software development company Slovenia, full-stack development, web application development, data engineering Slovenia, AI integrations, cloud infrastructure, K2 Solutions, razvoj programskih rešitev po meri, razvoj programske opreme Slovenija, podatkovni inženiring Slovenija">
     <meta name="author" content="Klemen Koleša">
     <meta name="geo.region" content="SI">
     <meta name="geo.placename" content="Slovenia">
@@ -18,8 +18,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://k2solutions.dev/">
-    <meta property="og:title" content="K2 Solutions - Data Engineering & Software Development | Slovenia">
-    <meta property="og:description" content="Freelance data engineering and software development in Slovenia. Custom data pipelines, ETL solutions, AI agents, and full-stack web applications.">
+    <meta property="og:title" content="K2 Solutions - Custom Software Solutions | Slovenia">
+    <meta property="og:description" content="Custom software solutions company in Slovenia. Full-stack web applications, data platforms, AI integrations, and cloud infrastructure.">
     <meta property="og:image" content="https://k2solutions.dev/k2-solutions-high-resolution-logo-transparent.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="sl_SI">
@@ -27,8 +27,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="K2 Solutions - Data Engineering & Software Development | Slovenia">
-    <meta name="twitter:description" content="Freelance data engineering and software development in Slovenia. Custom data pipelines, ETL solutions, AI agents, and full-stack web applications.">
+    <meta name="twitter:title" content="K2 Solutions - Custom Software Solutions | Slovenia">
+    <meta name="twitter:description" content="Custom software solutions company in Slovenia. Full-stack web applications, data platforms, AI integrations, and cloud infrastructure.">
     <meta name="twitter:image" content="https://k2solutions.dev/k2-solutions-high-resolution-logo-transparent.png">
 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -46,7 +46,7 @@
         "name": "K2 Solutions",
         "url": "https://k2solutions.dev",
         "logo": "https://k2solutions.dev/k2-solutions-high-resolution-logo-transparent.png",
-        "description": "Freelance data engineering and software development service in Slovenia. Custom data pipelines, ETL solutions, AI agents, and full-stack web applications.",
+        "description": "Custom software solutions company in Slovenia. Full-stack web applications, data platforms, AI integrations, and cloud infrastructure.",
         "founder": {
             "@type": "Person",
             "name": "Klemen Koleša",
@@ -63,16 +63,14 @@
         },
         "knowsLanguage": ["en", "sl"],
         "serviceType": [
-            "Data Engineering",
-            "Software Development",
-            "ETL Pipeline Development",
-            "Data Integration",
-            "Cloud Data Solutions",
+            "Custom Software Development",
             "Full-Stack Web Development",
             "API Development",
             "AI Agent Development",
-            "LLM Fine Tuning",
-            "Local LLM Deployment"
+            "Data Engineering",
+            "ETL Pipeline Development",
+            "Data Integration",
+            "Cloud Data Solutions"
         ],
         "sameAs": [
             "https://linkedin.com/in/klemen-kolesa",
@@ -105,7 +103,7 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#home" data-en="Home" data-sl="Domov">Home</a></li>
             <li><a href="#services" data-en="Services" data-sl="Storitve">Services</a></li>
-            <li><a href="#about" data-en="About" data-sl="O meni">About</a></li>
+            <li><a href="#about" data-en="About" data-sl="O nas">About</a></li>
             <li><a href="#contact" data-en="Contact" data-sl="Kontakt">Contact</a></li>
             <li>
                 <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
@@ -125,159 +123,198 @@
 <!-- Hero Section -->
 <section id="home" class="hero">
     <div class="hero-animation">
-        <!-- Desktop Animation -->
-        <svg class="pipeline-animation desktop-animation" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
-            <!-- Pipeline paths -->
+        <!-- Shared SVG sprite: cog shape + connection gradients (referenced by both desktop and mobile animations) -->
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true">
             <defs>
-                <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgba(255,255,255,0.3);stop-opacity:1" />
-                </linearGradient>
-            </defs>
-
-            <!-- Main pipelines -->
-            <path class="pipeline" d="M 0 100 L 800 100" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
-            <path class="pipeline" d="M 0 200 L 800 200" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
-            <path class="pipeline" d="M 0 300 L 800 300" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
-
-            <!-- Connecting lines to web app -->
-            <path class="pipeline" d="M 800 100 Q 850 100 900 150" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
-            <path class="pipeline" d="M 800 200 L 900 200" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
-            <path class="pipeline" d="M 800 300 Q 850 300 900 250" stroke="url(#pipeGrad)" stroke-width="3" fill="none" opacity="0.6"/>
-
-            <!-- Data particles flowing through pipelines -->
-            <circle class="data-particle particle-1" r="4" fill="rgba(255,255,255,0.8)">
-                <animate attributeName="cx" from="0" to="900" dur="4s" repeatCount="indefinite"/>
-                <animate attributeName="cy" from="100" to="150" dur="4s" repeatCount="indefinite"/>
-            </circle>
-            <circle class="data-particle particle-2" r="4" fill="rgba(255,255,255,0.8)">
-                <animate attributeName="cx" from="-100" to="900" dur="5s" repeatCount="indefinite"/>
-                <animate attributeName="cy" values="200;200;200" dur="5s" repeatCount="indefinite"/>
-            </circle>
-            <circle class="data-particle particle-3" r="4" fill="rgba(255,255,255,0.8)">
-                <animate attributeName="cx" from="-200" to="900" dur="4.5s" repeatCount="indefinite"/>
-                <animate attributeName="cy" from="300" to="250" dur="4.5s" repeatCount="indefinite"/>
-            </circle>
-            <circle class="data-particle particle-4" r="4" fill="rgba(255,255,255,0.7)">
-                <animate attributeName="cx" from="-50" to="900" dur="3.5s" repeatCount="indefinite"/>
-                <animate attributeName="cy" values="100;100;150" dur="3.5s" repeatCount="indefinite"/>
-            </circle>
-            <circle class="data-particle particle-5" r="4" fill="rgba(255,255,255,0.7)">
-                <animate attributeName="cx" from="-150" to="900" dur="4.2s" repeatCount="indefinite"/>
-                <animate attributeName="cy" values="300;300;250" dur="4.2s" repeatCount="indefinite"/>
-            </circle>
-
-            <!-- Web Application Portal (right side) -->
-            <g class="webapp-portal" opacity="0.7">
-                <rect x="900" y="130" width="250" height="140" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                <!-- Portal header -->
-                <rect x="900" y="130" width="250" height="30" rx="8" fill="rgba(255,255,255,0.15)"/>
-                <circle cx="920" cy="145" r="4" fill="rgba(255,255,255,0.5)"/>
-                <circle cx="935" cy="145" r="4" fill="rgba(255,255,255,0.5)"/>
-                <circle cx="950" cy="145" r="4" fill="rgba(255,255,255,0.5)"/>
-
-                <!-- Portal content lines -->
-                <rect x="920" y="175" width="80" height="8" rx="2" fill="rgba(255,255,255,0.2)">
-                    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="920" y="195" width="120" height="8" rx="2" fill="rgba(255,255,255,0.2)">
-                    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2.5s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="920" y="215" width="100" height="8" rx="2" fill="rgba(255,255,255,0.2)">
-                    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="920" y="235" width="90" height="8" rx="2" fill="rgba(255,255,255,0.2)">
-                    <animate attributeName="opacity" values="0.2;0.5;0.2" dur="2.2s" repeatCount="indefinite"/>
-                </rect>
-
-                <!-- Dashboard elements -->
-                <rect x="1060" y="175" width="70" height="40" rx="4" fill="rgba(255,255,255,0.15)">
-                    <animate attributeName="opacity" values="0.15;0.3;0.15" dur="3s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="1060" y="225" width="70" height="35" rx="4" fill="rgba(255,255,255,0.15)">
-                    <animate attributeName="opacity" values="0.15;0.3;0.15" dur="2.5s" repeatCount="indefinite"/>
-                </rect>
-            </g>
-        </svg>
-
-        <!-- Mobile Animation (Bottom to Top) -->
-        <svg class="pipeline-animation mobile-animation" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <defs>
-                <linearGradient id="pipeGradMobile" x1="0%" y1="100%" x2="0%" y2="0%">
+                <linearGradient id="connGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" />
                     <stop offset="100%" style="stop-color:rgba(255,255,255,0.4);stop-opacity:1" />
                 </linearGradient>
+                <linearGradient id="connGradMobile" x1="0%" y1="100%" x2="0%" y2="0%">
+                    <stop offset="0%" style="stop-color:rgba(255,255,255,0.15);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgba(255,255,255,0.4);stop-opacity:1" />
+                </linearGradient>
+                <!-- Cog: 8-tooth gear centered at (0,0), outer radius 60, tooth tip radius 72 -->
+                <g id="cog">
+                    <circle r="60" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+                    <rect x="-9" y="-72" width="18" height="16" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+                    <rect x="-9" y="-72" width="18" height="16" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" transform="rotate(45)"/>
+                    <rect x="-9" y="-72" width="18" height="16" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" transform="rotate(90)"/>
+                    <rect x="-9" y="-72" width="18" height="16" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" transform="rotate(135)"/>
+                    <rect x="-9" y="-72" width="18" height="16" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" transform="rotate(180)"/>
+                    <rect x="-9" y="-72" width="18" height="16" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" transform="rotate(225)"/>
+                    <rect x="-9" y="-72" width="18" height="16" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" transform="rotate(270)"/>
+                    <rect x="-9" y="-72" width="18" height="16" rx="2" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" transform="rotate(315)"/>
+                    <circle r="22" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+                    <circle r="6" fill="rgba(255,255,255,0.55)"/>
+                </g>
             </defs>
+        </svg>
 
-            <!-- Vertical pipelines flowing upward -->
-            <path class="pipeline" d="M 100 600 L 100 50" stroke="url(#pipeGradMobile)" stroke-width="4" fill="none" opacity="0.7"/>
-            <path class="pipeline" d="M 200 600 L 200 50" stroke="url(#pipeGradMobile)" stroke-width="4" fill="none" opacity="0.7"/>
-            <path class="pipeline" d="M 300 600 L 300 50" stroke="url(#pipeGradMobile)" stroke-width="4" fill="none" opacity="0.7"/>
+        <!-- Desktop Animation: cogs (engineering) → AI agent network -->
+        <svg class="pipeline-animation desktop-animation" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cog cluster (left) -->
+            <g transform="translate(310,200)">
+                <g>
+                    <use href="#cog"/>
+                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
+                </g>
+            </g>
+            <g transform="translate(450,128) scale(0.62)">
+                <g>
+                    <use href="#cog"/>
+                    <animateTransform attributeName="transform" type="rotate" from="22.5" to="-337.5" dur="14s" repeatCount="indefinite"/>
+                </g>
+            </g>
+            <g transform="translate(225,310) scale(0.5)">
+                <g>
+                    <use href="#cog"/>
+                    <animateTransform attributeName="transform" type="rotate" from="22.5" to="-337.5" dur="11s" repeatCount="indefinite"/>
+                </g>
+            </g>
 
-            <!-- Connecting lines to web app at top -->
-            <path class="pipeline" d="M 100 50 Q 100 30 150 20" stroke="url(#pipeGradMobile)" stroke-width="3" fill="none" opacity="0.7"/>
-            <path class="pipeline" d="M 200 50 L 200 20" stroke="url(#pipeGradMobile)" stroke-width="3" fill="none" opacity="0.7"/>
-            <path class="pipeline" d="M 300 50 Q 300 30 250 20" stroke="url(#pipeGradMobile)" stroke-width="3" fill="none" opacity="0.7"/>
+            <!-- Signal paths from cogs to AI cluster -->
+            <path d="M 510 170 Q 650 150 770 160" stroke="url(#connGrad)" stroke-width="2" fill="none" opacity="0.55" stroke-dasharray="4 6"/>
+            <path d="M 510 200 Q 650 200 770 210" stroke="url(#connGrad)" stroke-width="2" fill="none" opacity="0.55" stroke-dasharray="4 6"/>
+            <path d="M 510 235 Q 650 260 770 250" stroke="url(#connGrad)" stroke-width="2" fill="none" opacity="0.55" stroke-dasharray="4 6"/>
 
-            <!-- Data particles flowing upward -->
-            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.9)">
-                <animate attributeName="cx" values="100;100;150" dur="4s" repeatCount="indefinite"/>
-                <animate attributeName="cy" from="600" to="20" dur="4s" repeatCount="indefinite"/>
+            <!-- Particles flowing along signal paths -->
+            <circle r="4" fill="rgba(255,255,255,0.9)">
+                <animateMotion dur="3.6s" repeatCount="indefinite" path="M 510 170 Q 650 150 770 160"/>
             </circle>
-            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.9)">
-                <animate attributeName="cx" values="200;200;200" dur="3.5s" repeatCount="indefinite"/>
-                <animate attributeName="cy" from="600" to="20" dur="3.5s" repeatCount="indefinite"/>
+            <circle r="4" fill="rgba(255,255,255,0.9)">
+                <animateMotion dur="4.2s" repeatCount="indefinite" begin="0.8s" path="M 510 200 Q 650 200 770 210"/>
             </circle>
-            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.9)">
-                <animate attributeName="cx" values="300;300;250" dur="4.2s" repeatCount="indefinite"/>
-                <animate attributeName="cy" from="600" to="20" dur="4.2s" repeatCount="indefinite"/>
-            </circle>
-            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.8)">
-                <animate attributeName="cx" values="100;100;150" dur="5s" repeatCount="indefinite"/>
-                <animate attributeName="cy" from="600" to="20" dur="5s" repeatCount="indefinite"/>
-            </circle>
-            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.8)">
-                <animate attributeName="cx" values="200;200;200" dur="4.5s" repeatCount="indefinite"/>
-                <animate attributeName="cy" from="600" to="20" dur="4.5s" repeatCount="indefinite"/>
-            </circle>
-            <circle class="data-particle" r="5" fill="rgba(255,255,255,0.8)">
-                <animate attributeName="cx" values="300;300;250" dur="3.8s" repeatCount="indefinite"/>
-                <animate attributeName="cy" from="600" to="20" dur="3.8s" repeatCount="indefinite"/>
+            <circle r="4" fill="rgba(255,255,255,0.9)">
+                <animateMotion dur="3.9s" repeatCount="indefinite" begin="0.4s" path="M 510 235 Q 650 260 770 250"/>
             </circle>
 
-            <!-- Web Application Portal at top -->
-            <g class="webapp-portal" opacity="0.8">
-                <rect x="120" y="10" width="160" height="100" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
-                <!-- Portal header -->
-                <rect x="120" y="10" width="160" height="20" rx="6" fill="rgba(255,255,255,0.2)"/>
-                <circle cx="135" cy="20" r="3" fill="rgba(255,255,255,0.6)"/>
-                <circle cx="145" cy="20" r="3" fill="rgba(255,255,255,0.6)"/>
-                <circle cx="155" cy="20" r="3" fill="rgba(255,255,255,0.6)"/>
+            <!-- AI agent network (right): central hub + 6 satellite nodes with cross-links -->
+            <g transform="translate(900,200)">
+                <!-- Hub-to-satellite spokes -->
+                <line x1="0" y1="0" x2="-90" y2="-60" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="90" y2="-60" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="-105" y2="15" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="105" y2="15" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="-60" y2="90" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="60" y2="90" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
 
-                <!-- Portal content -->
-                <rect x="135" y="40" width="50" height="6" rx="2" fill="rgba(255,255,255,0.25)">
-                    <animate attributeName="opacity" values="0.25;0.6;0.25" dur="2s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="135" y="55" width="80" height="6" rx="2" fill="rgba(255,255,255,0.25)">
-                    <animate attributeName="opacity" values="0.25;0.6;0.25" dur="2.5s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="135" y="70" width="60" height="6" rx="2" fill="rgba(255,255,255,0.25)">
-                    <animate attributeName="opacity" values="0.25;0.6;0.25" dur="3s" repeatCount="indefinite"/>
-                </rect>
+                <!-- Satellite-to-satellite curved links (graph structure) -->
+                <path d="M -90 -60 Q -100 -25 -105 15" stroke="rgba(255,255,255,0.22)" stroke-width="1" fill="none"/>
+                <path d="M 90 -60 Q 100 -25 105 15" stroke="rgba(255,255,255,0.22)" stroke-width="1" fill="none"/>
+                <path d="M -105 15 Q -85 50 -60 90" stroke="rgba(255,255,255,0.22)" stroke-width="1" fill="none"/>
+                <path d="M 105 15 Q 85 50 60 90" stroke="rgba(255,255,255,0.22)" stroke-width="1" fill="none"/>
 
-                <!-- Dashboard elements -->
-                <rect x="230" y="40" width="35" height="25" rx="3" fill="rgba(255,255,255,0.2)">
-                    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/>
-                </rect>
-                <rect x="230" y="75" width="35" height="25" rx="3" fill="rgba(255,255,255,0.2)">
-                    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2.5s" repeatCount="indefinite"/>
-                </rect>
+                <!-- Satellite nodes (pulsing) -->
+                <circle cx="-90" cy="-60" r="9" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5">
+                    <animate attributeName="r" values="9;12;9" dur="2.6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="90" cy="-60" r="9" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5">
+                    <animate attributeName="r" values="9;12;9" dur="3.0s" repeatCount="indefinite" begin="0.4s"/>
+                </circle>
+                <circle cx="-105" cy="15" r="9" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5">
+                    <animate attributeName="r" values="9;12;9" dur="2.8s" repeatCount="indefinite" begin="0.7s"/>
+                </circle>
+                <circle cx="105" cy="15" r="9" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5">
+                    <animate attributeName="r" values="9;12;9" dur="2.5s" repeatCount="indefinite" begin="1.1s"/>
+                </circle>
+                <circle cx="-60" cy="90" r="9" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5">
+                    <animate attributeName="r" values="9;12;9" dur="3.2s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
+                <circle cx="60" cy="90" r="9" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.7)" stroke-width="1.5">
+                    <animate attributeName="r" values="9;12;9" dur="2.7s" repeatCount="indefinite" begin="0.5s"/>
+                </circle>
+
+                <!-- Central AI hub: layered concentric circles, the inner one breathes -->
+                <circle cx="0" cy="0" r="32" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+                <circle cx="0" cy="0" r="22" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.65)" stroke-width="2">
+                    <animate attributeName="r" values="22;26;22" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="0" cy="0" r="6" fill="rgba(255,255,255,0.9)"/>
+            </g>
+        </svg>
+
+        <!-- Mobile Animation (vertical): cogs at bottom → AI cluster at top -->
+        <svg class="pipeline-animation mobile-animation" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <!-- AI agent network at top -->
+            <g transform="translate(200,140)">
+                <line x1="0" y1="0" x2="-65" y2="-45" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="65" y2="-45" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="-80" y2="10" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="80" y2="10" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="-40" y2="60" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+                <line x1="0" y1="0" x2="40" y2="60" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+
+                <path d="M -65 -45 Q -75 -20 -80 10" stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="none"/>
+                <path d="M 65 -45 Q 75 -20 80 10" stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="none"/>
+
+                <circle cx="-65" cy="-45" r="7" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5">
+                    <animate attributeName="r" values="7;10;7" dur="2.6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="65" cy="-45" r="7" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5">
+                    <animate attributeName="r" values="7;10;7" dur="3.0s" repeatCount="indefinite" begin="0.4s"/>
+                </circle>
+                <circle cx="-80" cy="10" r="7" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5">
+                    <animate attributeName="r" values="7;10;7" dur="2.8s" repeatCount="indefinite" begin="0.7s"/>
+                </circle>
+                <circle cx="80" cy="10" r="7" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5">
+                    <animate attributeName="r" values="7;10;7" dur="2.5s" repeatCount="indefinite" begin="1.1s"/>
+                </circle>
+                <circle cx="-40" cy="60" r="7" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5">
+                    <animate attributeName="r" values="7;10;7" dur="3.2s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
+                <circle cx="40" cy="60" r="7" fill="rgba(255,255,255,0.35)" stroke="rgba(255,255,255,0.75)" stroke-width="1.5">
+                    <animate attributeName="r" values="7;10;7" dur="2.7s" repeatCount="indefinite" begin="0.5s"/>
+                </circle>
+
+                <circle cx="0" cy="0" r="22" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+                <circle cx="0" cy="0" r="14" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.7)" stroke-width="2">
+                    <animate attributeName="r" values="14;18;14" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="0" cy="0" r="5" fill="rgba(255,255,255,0.95)"/>
+            </g>
+
+            <!-- Signal paths from cogs upward to AI cluster -->
+            <path d="M 150 480 Q 130 350 175 235" stroke="url(#connGradMobile)" stroke-width="2" fill="none" opacity="0.55" stroke-dasharray="4 6"/>
+            <path d="M 200 470 Q 200 350 200 235" stroke="url(#connGradMobile)" stroke-width="2" fill="none" opacity="0.55" stroke-dasharray="4 6"/>
+            <path d="M 250 480 Q 270 350 225 235" stroke="url(#connGradMobile)" stroke-width="2" fill="none" opacity="0.55" stroke-dasharray="4 6"/>
+
+            <!-- Particles flowing upward -->
+            <circle r="5" fill="rgba(255,255,255,0.95)">
+                <animateMotion dur="4s" repeatCount="indefinite" path="M 150 480 Q 130 350 175 235"/>
+            </circle>
+            <circle r="5" fill="rgba(255,255,255,0.95)">
+                <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.7s" path="M 200 470 Q 200 350 200 235"/>
+            </circle>
+            <circle r="5" fill="rgba(255,255,255,0.95)">
+                <animateMotion dur="4.2s" repeatCount="indefinite" begin="1.4s" path="M 250 480 Q 270 350 225 235"/>
+            </circle>
+
+            <!-- Cog cluster at bottom -->
+            <g transform="translate(200,500) scale(0.7)">
+                <g>
+                    <use href="#cog"/>
+                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
+                </g>
+            </g>
+            <g transform="translate(295,440) scale(0.42)">
+                <g>
+                    <use href="#cog"/>
+                    <animateTransform attributeName="transform" type="rotate" from="22.5" to="-337.5" dur="14s" repeatCount="indefinite"/>
+                </g>
+            </g>
+            <g transform="translate(110,455) scale(0.36)">
+                <g>
+                    <use href="#cog"/>
+                    <animateTransform attributeName="transform" type="rotate" from="22.5" to="-337.5" dur="11s" repeatCount="indefinite"/>
+                </g>
             </g>
         </svg>
     </div>
     <div class="hero-content">
-        <h1 data-en="Data Engineering & Software Development" data-sl="Podatkovni inženiring & Razvoj programske opreme">Data Engineering & Software Development</h1>
-        <p data-en="Custom Data Pipelines, ETL Solutions & Scalable Applications" data-sl="Podatkovni cevovodi po meri, ETL rešitve & Skalabilne aplikacije">Custom Data Pipelines, ETL Solutions & Scalable Applications</p>
+        <h1 data-en="Custom Software Solutions" data-sl="Razvoj programskih rešitev po meri">Custom Software Solutions</h1>
+        <p data-en="Full-stack development, data engineering, and AI integrations for modern businesses" data-sl="Full-stack razvoj, podatkovni inženiring in AI integracije za sodobna podjetja">Full-stack development, data engineering, and AI integrations for modern businesses</p>
         <a href="#contact" class="cta-button" data-en="Start Your Project" data-sl="Začnite projekt">Start Your Project</a>
     </div>
 </section>
@@ -287,9 +324,24 @@
     <h2 data-en="Services" data-sl="Storitve">Services</h2>
     <div class="services-grid">
         <div class="service-card">
+            <div class="service-icon"><span class="material-symbols-outlined">smart_toy</span></div>
+            <h3 data-en="AI Agentic Solutions" data-sl="AI agentne rešitve">AI Agentic Solutions</h3>
+            <p data-en="Intelligent autonomous agents powered by large language models. Custom AI workflows and agentic systems that can reason, plan, and execute complex tasks with minimal human intervention — model and tooling chosen per use case." data-sl="Inteligentni avtonomni agenti, podprti z velikimi jezikovnimi modeli. Prilagojeni AI procesi in agentni sistemi, ki lahko razmišljajo, načrtujejo in izvajajo kompleksne naloge z minimalno človeško intervencijo — model in orodja izbrana glede na primer uporabe.">Intelligent autonomous agents powered by large language models. Custom AI workflows and agentic systems that can reason, plan, and execute complex tasks with minimal human intervention — model and tooling chosen per use case.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><span class="material-symbols-outlined">code</span></div>
+            <h3 data-en="Full-Stack Web Development" data-sl="Full-Stack spletni razvoj">Full-Stack Web Development</h3>
+            <p data-en="End-to-end web application development with modern frameworks. Data-driven dashboards, internal tools, and customer-facing products built around your domain — using the language and stack that best fits the problem." data-sl="Celovit razvoj spletnih aplikacij s sodobnimi ogrodji. Podatkovne nadzorne plošče, interna orodja in produkti za končne uporabnike, zgrajeni okoli vaše domene — v jeziku in stacku, ki najbolj ustreza problemu.">End-to-end web application development with modern frameworks. Data-driven dashboards, internal tools, and customer-facing products built around your domain — using the language and stack that best fits the problem.</p>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><span class="material-symbols-outlined">api</span></div>
+            <h3 data-en="API Development & Integration" data-sl="Razvoj & Integracija API-jev">API Development & Integration</h3>
+            <p data-en="REST and GraphQL APIs, third-party integrations, and event-driven backends. Robust services and modern data access patterns built around the contracts your application actually needs." data-sl="REST in GraphQL API-ji, integracije tretjih oseb in dogodkovno vodeni zaledni sistemi. Robustne storitve in sodobni vzorci dostopa do podatkov, prilagojeni dejanskim potrebam vaše aplikacije.">REST and GraphQL APIs, third-party integrations, and event-driven backends. Robust services and modern data access patterns built around the contracts your application actually needs.</p>
+        </div>
+        <div class="service-card">
             <div class="service-icon"><span class="material-symbols-outlined">hub</span></div>
             <h3 data-en="Custom Data Pipelines & ETL" data-sl="Podatkovni cevovodi & ETL po meri">Custom Data Pipelines & ETL</h3>
-            <p data-en="Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing with Python, Apache Airflow, and modern orchestration tools." data-sl="Načrtovanje in implementacija robustnih podatkovnih cevovodov za pridobivanje, transformacijo in nalaganje podatkov. Avtomatizirani procesi za paketno in sprotno obdelavo podatkov s Python, Apache Airflow in modernimi orkestracijskih orodji.">Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing with <span class="tech-term">Python</span>, <span class="tech-term">Apache Airflow</span>, and modern orchestration tools.</p>
+            <p data-en="Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing, built on the right stack for your scale, latency, and operational constraints." data-sl="Načrtovanje in implementacija robustnih podatkovnih cevovodov za pridobivanje, transformacijo in nalaganje podatkov. Avtomatizirani procesi za paketno in sprotno obdelavo podatkov, zgrajeni na ustreznem stacku glede na obseg, latenco in operativne zahteve.">Design and implementation of robust data pipelines for extracting, transforming, and loading data. Automated workflows for batch and real-time data processing, built on the right stack for your scale, latency, and operational constraints.</p>
         </div>
         <div class="service-card">
             <div class="service-icon"><span class="material-symbols-outlined">analytics</span></div>
@@ -299,27 +351,12 @@
         <div class="service-card">
             <div class="service-icon"><span class="material-symbols-outlined">transform</span></div>
             <h3 data-en="Data Processing & Transformation" data-sl="Obdelava & Transformacija podatkov">Data Processing & Transformation</h3>
-            <p data-en="Complex data transformation logic, cleansing, and enrichment. Building scalable data processing systems using Python (Pandas, PySpark), SQL, and cloud-native services for handling large-scale datasets." data-sl="Kompleksna logika transformacije podatkov, čiščenje in obogatitev. Gradnja skalabilnih sistemov za obdelavo podatkov z uporabo Python (Pandas, PySpark), SQL in oblakom prilagojenih storitev za upravljanje obsežnih podatkovnih nizov.">Complex data transformation logic, cleansing, and enrichment. Building scalable data processing systems using <span class="tech-term">Python</span> (<span class="tech-term">Pandas</span>, <span class="tech-term">PySpark</span>), <span class="tech-term">SQL</span>, and cloud-native services for handling large-scale datasets.</p>
+            <p data-en="Complex data transformation logic, cleansing, and enrichment. Scalable batch and distributed processing systems for handling large-scale datasets, with technology choices matched to throughput, cost, and team familiarity." data-sl="Kompleksna logika transformacije podatkov, čiščenje in obogatitev. Skalabilni sistemi za paketno in porazdeljeno obdelavo obsežnih podatkovnih nizov, z izbiro tehnologij prilagojeno pretočnosti, stroškom in znanju ekipe.">Complex data transformation logic, cleansing, and enrichment. Scalable batch and distributed processing systems for handling large-scale datasets, with technology choices matched to throughput, cost, and team familiarity.</p>
         </div>
         <div class="service-card">
             <div class="service-icon"><span class="material-symbols-outlined">cloud</span></div>
             <h3 data-en="Cloud Data Solutions" data-sl="Oblačne podatkovne rešitve">Cloud Data Solutions</h3>
-            <p data-en="Cloud-based data infrastructure on GCP and Azure. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations." data-sl="Oblačna podatkovna infrastruktura na GCP in Azure. Podatkovne skladiščnice, rešitve za jezera podatkov in strežniško neodvisna obdelava podatkov. Optimizirane arhitekture za stroškovno učinkovite, skalabilne podatkovne operacije.">Cloud-based data infrastructure on <span class="tech-term">GCP</span> and <span class="tech-term">Azure</span>. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><span class="material-symbols-outlined">code</span></div>
-            <h3 data-en="Full-Stack Web Development" data-sl="Full-Stack spletni razvoj">Full-Stack Web Development</h3>
-            <p data-en="End-to-end web application development using modern frameworks like Vue.js, Quasar, Node.js, and Python. Data-driven dashboards and applications that visualize and interact with your data pipelines." data-sl="Celovit razvoj spletnih aplikacij z uporabo sodobnih ogrodij kot so Vue.js, Quasar, Node.js in Python. Podatkovne nadzorne plošče in aplikacije, ki vizualizirajo in interaktivno delujejo z vašimi podatkovnimi cevovodi.">End-to-end web application development using modern frameworks like <span class="tech-term">Vue.js</span>, <span class="tech-term">Quasar</span>, <span class="tech-term">Node.js</span>, and <span class="tech-term">Python</span>. Data-driven dashboards and applications that visualize and interact with your data pipelines.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><span class="material-symbols-outlined">api</span></div>
-            <h3 data-en="API Development & Integration" data-sl="Razvoj & Integracija API-jev">API Development & Integration</h3>
-            <p data-en="RESTful APIs, GraphQL services, and third-party integrations. Robust backend systems with MongoDB, PostgreSQL, and modern data access patterns for your applications." data-sl="RESTful API-ji, GraphQL storitve in integracije tretjih oseb. Robustni zaledni sistemi z MongoDB, PostgreSQL in sodobnimi vzorci dostopa do podatkov za vaše aplikacije."><span class="tech-term">RESTful APIs</span>, <span class="tech-term">GraphQL</span> services, and third-party integrations. Robust backend systems with <span class="tech-term">MongoDB</span>, <span class="tech-term">PostgreSQL</span>, and modern data access patterns for your applications.</p>
-        </div>
-        <div class="service-card">
-            <div class="service-icon"><span class="material-symbols-outlined">smart_toy</span></div>
-            <h3 data-en="AI Agentic Solutions" data-sl="AI agentne rešitve">AI Agentic Solutions</h3>
-            <p data-en="Build intelligent autonomous agents powered by Large Language Models (LLMs). Custom AI workflows with n8n, LangChain, and OpenAI. LLM fine-tuning for domain-specific tasks and local model deployment with Ollama. Intelligent automation and agentic systems that can reason, plan, and execute complex tasks with minimal human intervention." data-sl="Gradnja inteligentnih avtonomnih agentov, podprtih z velikimi jezikovnimi modeli (LLM). Prilagojeni AI procesi z n8n, LangChain in OpenAI. Fino nastavljanje LLM modelov za domensko specifične naloge in lokalno nameščanje modelov z Ollama. Inteligentna avtomatizacija in agentni sistemi, ki lahko razmišljajo, načrtujejo in izvajajo kompleksne naloge z minimalno človeško intervencijo.">Build intelligent autonomous agents powered by <span class="tech-term">Large Language Models (LLMs)</span>. Custom AI workflows with <span class="tech-term">n8n</span>, <span class="tech-term">LangChain</span>, and <span class="tech-term">OpenAI</span>. LLM <span class="tech-term">fine-tuning</span> for domain-specific tasks and local model deployment with <span class="tech-term">Ollama</span>. Intelligent automation and agentic systems that can reason, plan, and execute complex tasks with minimal human intervention.</p>
+            <p data-en="Cloud-based data infrastructure across major providers. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations — provider chosen for fit, not habit." data-sl="Oblačna podatkovna infrastruktura pri vodilnih ponudnikih. Podatkovne skladiščnice, rešitve za jezera podatkov in strežniško neodvisna obdelava podatkov. Optimizirane arhitekture za stroškovno učinkovite, skalabilne podatkovne operacije — ponudnik izbran zaradi ustreznosti, ne navade.">Cloud-based data infrastructure across major providers. Data warehousing, lake solutions, and serverless data processing. Optimized architectures for cost-effective, scalable data operations — provider chosen for fit, not habit.</p>
         </div>
     </div>
 </section>
@@ -328,38 +365,27 @@
 <section id="about">
     <h2 data-en="About K2 Solutions" data-sl="O K2 Solutions">About K2 Solutions</h2>
     <div class="about-content">
-        <p data-en="K2 Solutions is a freelance data engineering and software development service founded by Klemen Koleša. I specialize in building custom data pipelines, ETL solutions, and modern applications that turn raw data into actionable insights." data-sl="K2 Solutions je freelance storitev podatkovnega inženiringa in razvoja programske opreme, ki jo je ustanovil Klemen Koleša. Specializiran sem za gradnjo podatkovnih cevovodov po meri, ETL rešitev in sodobnih aplikacij, ki surove podatke spremenijo v uporabne vpoglede.">K2 Solutions is a freelance data engineering and software development service founded by Klemen Koleša. I specialize in building custom data pipelines, ETL solutions, and modern applications that turn raw data into actionable insights.</p>
-        <p data-en="With deep expertise in data engineering, I help businesses automate their data workflows, integrate disparate data sources, and build scalable data infrastructure. From small-scale data transformations to enterprise-level data pipelines, I deliver solutions that are reliable, efficient, and maintainable." data-sl="Z globokim strokovnim znanjem na področju podatkovnega inženiringa pomagam podjetjem avtomatizirati podatkovne procese, integrirati različne vire podatkov in graditi skalabilno podatkovno infrastrukturo. Od manjših podatkovnih transformacij do podatkovnih cevovodov na ravni podjetja dostavljam rešitve, ki so zanesljive, učinkovite in vzdrževane.">With deep expertise in data engineering, I help businesses automate their data workflows, integrate disparate data sources, and build scalable data infrastructure. From small-scale data transformations to enterprise-level data pipelines, I deliver solutions that are reliable, efficient, and maintainable.</p>
-        <p data-en="My approach combines data engineering best practices with full-stack development capabilities, enabling me to build complete solutions - from data ingestion and processing to visualization and application development. I work with startups and established companies to solve complex data challenges and build data-driven applications." data-sl="Moj pristop združuje najboljše prakse podatkovnega inženiringa s polnim spektrom razvojnih zmožnosti, kar mi omogoča gradnjo celovitih rešitev - od pridobivanja in obdelave podatkov do vizualizacije in razvoja aplikacij. Sodelujem s startup podjetji in uveljavljenimi podjetji pri reševanju kompleksnih podatkovnih izzivov in gradnji podatkovnih aplikacij.">My approach combines data engineering best practices with full-stack development capabilities, enabling me to build complete solutions - from data ingestion and processing to visualization and application development. I work with startups and established companies to solve complex data challenges and build data-driven applications.</p>
+        <p data-en="K2 Solutions is a custom software solutions company based in Slovenia. We design and build full-stack web applications, data platforms, and AI-powered systems for businesses that need software tailored to how they actually work." data-sl="K2 Solutions je podjetje za razvoj programskih rešitev po meri s sedežem v Sloveniji. Načrtujemo in gradimo full-stack spletne aplikacije, podatkovne platforme in AI sisteme za podjetja, ki potrebujejo programsko opremo, prilagojeno svojemu načinu dela.">K2 Solutions is a custom software solutions company based in Slovenia. We design and build full-stack web applications, data platforms, and AI-powered systems for businesses that need software tailored to how they actually work.</p>
+        <p data-en="Drawing on more than a decade of combined experience across web development, cloud infrastructure, and data engineering, we help businesses automate critical workflows, integrate disparate systems, and build software that scales with them. From focused MVPs to multi-year enterprise platforms, we deliver solutions that are reliable, maintainable, and built to last." data-sl="Z več kot desetletjem skupnih izkušenj na področju spletnega razvoja, oblačne infrastrukture in podatkovnega inženiringa pomagamo podjetjem avtomatizirati ključne procese, integrirati raznolike sisteme in graditi programsko opremo, ki raste z njimi. Od osredotočenih MVP-jev do večletnih platform na ravni podjetja dostavljamo rešitve, ki so zanesljive, vzdrževalne in narejene za dolgoročno uporabo.">Drawing on more than a decade of combined experience across web development, cloud infrastructure, and data engineering, we help businesses automate critical workflows, integrate disparate systems, and build software that scales with them. From focused MVPs to multi-year enterprise platforms, we deliver solutions that are reliable, maintainable, and built to last.</p>
+        <p data-en="Our approach combines full-stack development with data engineering and modern AI tooling, letting us deliver complete solutions end-to-end — from data ingestion through to user-facing applications. We work with startups and established companies on engagements ranging from focused integrations to multi-year platforms, leveraging AI-assisted development to ship faster without compromising on quality." data-sl="Naš pristop združuje full-stack razvoj s podatkovnim inženiringom in sodobnimi AI orodji, kar nam omogoča celovito izvedbo rešitev — od pridobivanja podatkov do uporabniških aplikacij. Sodelujemo s startupi in uveljavljenimi podjetji na projektih od osredotočenih integracij do večletnih platform, pri čemer s pomočjo AI-podprtega razvoja gradimo hitreje brez kompromisov pri kakovosti.">Our approach combines full-stack development with data engineering and modern AI tooling, letting us deliver complete solutions end-to-end — from data ingestion through to user-facing applications. We work with startups and established companies on engagements ranging from focused integrations to multi-year platforms, leveraging AI-assisted development to ship faster without compromising on quality.</p>
 
         <h3 style="margin-top: 3rem; margin-bottom: 1rem; color: var(--primary-color);" data-en="Technical Expertise" data-sl="Tehnično znanje">Technical Expertise</h3>
         <div class="skills">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Pandas/PySpark</span>
-            <span class="skill-tag">Apache Airflow</span>
-            <span class="skill-tag">ETL Pipelines</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">Google Cloud Platform</span>
-            <span class="skill-tag">Azure</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">JavaScript/TypeScript</span>
-            <span class="skill-tag">Vue.js</span>
-            <span class="skill-tag">Quasar</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Flask/Django</span>
-            <span class="skill-tag">RESTful APIs</span>
-            <span class="skill-tag">GraphQL</span>
-            <span class="skill-tag">LLMs</span>
-            <span class="skill-tag">AI Agents</span>
-            <span class="skill-tag">LangChain</span>
-            <span class="skill-tag">n8n</span>
-            <span class="skill-tag">OpenAI API</span>
-            <span class="skill-tag">Fine Tuning</span>
-            <span class="skill-tag">Ollama</span>
-            <span class="skill-tag">CI/CD</span>
-            <span class="skill-tag">Git</span>
+            <span class="skill-tag" data-en="Custom Software Development" data-sl="Razvoj programske opreme po meri">Custom Software Development</span>
+            <span class="skill-tag" data-en="Full-Stack Web Development" data-sl="Full-Stack spletni razvoj">Full-Stack Web Development</span>
+            <span class="skill-tag" data-en="Backend & APIs" data-sl="Backend & API-ji">Backend & APIs</span>
+            <span class="skill-tag" data-en="Frontend Engineering" data-sl="Frontend razvoj">Frontend Engineering</span>
+            <span class="skill-tag" data-en="Data Engineering" data-sl="Podatkovni inženiring">Data Engineering</span>
+            <span class="skill-tag" data-en="ETL & Data Pipelines" data-sl="ETL & podatkovni cevovodi">ETL & Data Pipelines</span>
+            <span class="skill-tag" data-en="Database Design" data-sl="Načrtovanje podatkovnih baz">Database Design</span>
+            <span class="skill-tag" data-en="Cloud Architecture" data-sl="Oblačna arhitektura">Cloud Architecture</span>
+            <span class="skill-tag" data-en="DevOps & CI/CD" data-sl="DevOps & CI/CD">DevOps & CI/CD</span>
+            <span class="skill-tag" data-en="System Integration" data-sl="Integracija sistemov">System Integration</span>
+            <span class="skill-tag" data-en="AI & LLM Integration" data-sl="AI & integracije LLM">AI & LLM Integration</span>
+            <span class="skill-tag" data-en="Agentic Workflows" data-sl="Agentni procesi">Agentic Workflows</span>
+            <span class="skill-tag" data-en="Mobile Development" data-sl="Mobilni razvoj">Mobile Development</span>
+            <span class="skill-tag" data-en="Authentication & Security" data-sl="Avtentikacija & varnost">Authentication & Security</span>
+            <span class="skill-tag" data-en="Performance & Scalability" data-sl="Zmogljivost & skalabilnost">Performance & Scalability</span>
         </div>
     </div>
 </section>
@@ -368,7 +394,7 @@
 <section id="contact">
     <h2 data-en="Let's Work Together" data-sl="Sodelujmo skupaj">Let's Work Together</h2>
     <div class="contact-content">
-        <p data-en="Ready to start your next data engineering or software development project? I'm available for freelance work and consulting. Let's discuss how I can help build custom data pipelines, ETL solutions, or transform your data infrastructure." data-sl="Pripravljeni začeti vaš naslednji projekt podatkovnega inženiringa ali razvoja programske opreme? Na voljo sem za freelance delo in svetovanje. Pogovorimo se, kako lahko pomagam zgraditi podatkovne cevovode po meri, ETL rešitve ali transformirati vašo podatkovno infrastrukturo.">Ready to start your next data engineering or software development project? I'm available for freelance work and consulting. Let's discuss how I can help build custom data pipelines, ETL solutions, or transform your data infrastructure.</p>
+        <p data-en="Have a software project in mind? We work on engagements of all sizes, from focused consulting to building complete platforms. Get in touch and let's talk about what you're trying to build." data-sl="Imate v mislih projekt razvoja programske opreme? Sodelujemo na projektih vseh velikosti, od osredotočenega svetovanja do gradnje celovitih platform. Oglasite se in pogovorimo se o tem, kaj želite zgraditi.">Have a software project in mind? We work on engagements of all sizes, from focused consulting to building complete platforms. Get in touch and let's talk about what you're trying to build.</p>
 
         <div class="contact-info">
             <div class="contact-item">
@@ -391,7 +417,7 @@
 
 <!-- Footer -->
 <footer>
-    <p data-en="&copy; 2025 K2 Solutions - Klemen Koleša. All rights reserved." data-sl="&copy; 2025 K2 Solutions - Klemen Koleša. Vse pravice pridržane.">&copy; 2025 K2 Solutions - Klemen Koleša. All rights reserved.</p>
+    <p data-en="&copy; 2025 K2 Solutions. All rights reserved." data-sl="&copy; 2025 K2 Solutions. Vse pravice pridržane.">&copy; 2025 K2 Solutions. All rights reserved.</p>
 </footer>
 
 <script>
@@ -421,11 +447,11 @@
     function updateLanguage(lang) {
         // Update page title
         if (lang === 'sl') {
-            document.title = 'K2 Solutions - Podatkovni inženiring & Razvoj programske opreme | Slovenija';
-            document.querySelector('meta[name="description"]').setAttribute('content', 'K2 Solutions — Klemen Koleša — freelance podatkovni inženiring in razvoj programske opreme v Sloveniji. Podatkovni cevovodi po meri, ETL rešitve, AI agenti, full-stack spletni razvoj.');
+            document.title = 'K2 Solutions - Razvoj programskih rešitev po meri | Slovenija';
+            document.querySelector('meta[name="description"]').setAttribute('content', 'K2 Solutions — podjetje za razvoj programskih rešitev po meri v Sloveniji. Full-stack spletne aplikacije, podatkovne platforme, AI integracije in oblačna infrastruktura, zgrajene od začetka do konca s pravim stackom za vsak projekt.');
         } else {
-            document.title = 'K2 Solutions - Data Engineering & Software Development | Slovenia';
-            document.querySelector('meta[name="description"]').setAttribute('content', 'K2 Solutions by Klemen Koleša — freelance data engineering and software development in Slovenia. Custom data pipelines, ETL solutions, AI agents, full-stack web development. Python, Airflow, Vue.js, GCP, Azure.');
+            document.title = 'K2 Solutions - Custom Software Solutions | Slovenia';
+            document.querySelector('meta[name="description"]').setAttribute('content', 'K2 Solutions — custom software solutions company in Slovenia. Full-stack web applications, data platforms, AI integrations, and cloud infrastructure, built end-to-end with the right stack for each project.');
         }
 
         // Update all elements with language attributes
